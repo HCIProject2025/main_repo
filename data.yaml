@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['bat']
+
+roboflow:
+  workspace: kay-pu5gn
+  project: baseballbat-zaoym
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kay-pu5gn/baseballbat-zaoym/dataset/3
