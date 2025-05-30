@@ -1,6 +1,6 @@
 weights: yolov5s.pt
 cfg: ""
-data: data/Baseballbat.v3i.yolov5pytorch/data.yaml
+data: ./data/Baseball-bat.v1i.yolov5pytorch/data.yaml
 hyp:
   lr0: 0.01
   lrf: 0.01
@@ -52,7 +52,7 @@ optimizer: SGD
 sync_bn: false
 workers: 8
 project: runs\train
-name: bat_detector
+name: bat_detector_v1
 exist_ok: false
 quad: false
 cos_lr: false
@@ -69,4 +69,4 @@ bbox_interval: -1
 artifact_alias: latest
 ndjson_console: false
 ndjson_file: false
-save_dir: runs\train\bat_detector
+save_dir: runs\train\bat_detector_v1
