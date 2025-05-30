@@ -1,12 +1,13 @@
-import cv2
-import torch
-import numpy as np
 import math
 
+import cv2
+import torch
+
 # YOLO 모델 경로
-MODEL_PATH = '../runs/train/bat_detector3/weights/best.pt'
+MODEL_PATH = "../runs/train/bat_detector3/weights/best.pt"
 # 모델 로드
-yolo = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_PATH, force_reload=True)
+yolo = torch.hub.load("ultralytics/yolov5", "custom", path=MODEL_PATH, force_reload=True)
+
 
 def angle_from_horizontal(v):
     ref = (1, 0)  # 기준 수평 벡터
@@ -16,6 +17,7 @@ def angle_from_horizontal(v):
         return 0
     angle = math.acos(dot / mag_v)
     return math.degrees(angle)
+
 
 # 웹캠 영상 열기 (0번 카메라)
 cap = cv2.VideoCapture(5)
@@ -56,9 +58,8 @@ while True:
 
     cv2.imshow("Swing Angle Detector", frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 cap.release()
 cv2.destroyAllWindows()
-
