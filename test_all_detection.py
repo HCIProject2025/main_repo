@@ -18,7 +18,7 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.5
 )
 
-def load_models(yolo_weights='yolov5s.pt', bat_weights='best.pt', device=''):
+def load_models(yolo_weights='yolov5s.pt', bat_weights = 'c:/2025_HCI/yolov5/runs/train/bat_detector3/weights/best.pt', device=''):
     # Load general YOLO model
     device = select_device(device)
     yolo_model = DetectMultiBackend(yolo_weights, device=device)
@@ -117,7 +117,7 @@ def process_hands(image):
 def calculate_distance(point1, point2):
     return np.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
 
-def main(yolo_weights='yolov5s.pt', bat_weights='best.pt', source='0', device=''):
+def main(yolo_weights='yolov5s.pt', bat_weights='c:/2025_HCI/yolov5/runs/train/bat_detector3/weights/best.pt', source='0', device=''):
     # Load models
     yolo_info, bat_info, device = load_models(yolo_weights, bat_weights, device)
     yolo_model, yolo_stride, yolo_names = yolo_info
@@ -178,4 +178,4 @@ def main(yolo_weights='yolov5s.pt', bat_weights='best.pt', source='0', device=''
 
 if __name__ == '__main__':
     # Use yolov5s.pt for general object detection and best.pt for bat detection
-    main(yolo_weights='yolov5s.pt', bat_weights='best.pt', source='0') 
+    main(yolo_weights='yolov5s.pt', bat_weights='c:/2025_HCI/yolov5/runs/train/bat_detector3/weights/best.pt', source='0') 
