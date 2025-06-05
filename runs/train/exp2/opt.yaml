@@ -1,6 +1,6 @@
 weights: yolov5s.pt
 cfg: ""
-data: data/Baseballbat.v3i.yolov5pytorch/data.yaml
+data: data\coco128.yaml
 hyp:
   lr0: 0.01
   lrf: 0.01
@@ -30,7 +30,7 @@ hyp:
   mosaic: 1.0
   mixup: 0.0
   copy_paste: 0.0
-epochs: 50
+epochs: 100
 batch_size: 16
 imgsz: 640
 rect: false
@@ -52,7 +52,7 @@ optimizer: SGD
 sync_bn: false
 workers: 8
 project: runs\train
-name: bat_detector
+name: exp
 exist_ok: false
 quad: false
 cos_lr: false
@@ -69,4 +69,4 @@ bbox_interval: -1
 artifact_alias: latest
 ndjson_console: false
 ndjson_file: false
-save_dir: runs\train\bat_detector
+save_dir: runs\train\exp2
