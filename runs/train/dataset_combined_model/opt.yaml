@@ -1,6 +1,6 @@
-weights: yolov5s.pt
+weights: runs/train/bat_detector3/weights/best.pt
 cfg: ''
-data: data/bat.yaml
+data: data/dataset_combined/data_combined.yaml
 hyp:
   lr0: 0.01
   lrf: 0.01
@@ -52,7 +52,7 @@ optimizer: SGD
 sync_bn: false
 workers: 8
 project: runs\train
-name: bat_single_detector
+name: dataset_combined_model
 exist_ok: false
 quad: false
 cos_lr: false
@@ -69,4 +69,4 @@ bbox_interval: -1
 artifact_alias: latest
 ndjson_console: false
 ndjson_file: false
-save_dir: runs\train\bat_single_detector
+save_dir: runs\train\dataset_combined_model
