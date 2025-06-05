@@ -184,4 +184,4 @@ def detect_video_vertical(video_path, target_class='bat', weights='runs/train/fi
 
 if __name__ == '__main__':
     # rotate=True로 주면 90도 회전 후 처리
-    detect_video_vertical('video/test3.mp4', rotate=False)
+    detect_video_vertical('video/swing_test.mp4', rotate=True)
