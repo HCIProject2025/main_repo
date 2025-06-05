@@ -1,9 +1,10 @@
-import cv2
 import os
 
-video_path = 'video/swing_test.mp4'  # 🎞️ 동영상 경로
-output_dir = 'swing_test_frames'          # 🖼️ 저장할 폴더
-interval_sec = 0.2              # 📸 몇 초마다 프레임 추출할지
+import cv2
+
+video_path = "video/swing_test.mp4"  # 🎞️ 동영상 경로
+output_dir = "swing_test_frames"  # 🖼️ 저장할 폴더
+interval_sec = 0.2  # 📸 몇 초마다 프레임 추출할지
 
 os.makedirs(output_dir, exist_ok=True)
 
